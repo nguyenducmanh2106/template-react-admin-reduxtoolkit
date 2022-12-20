@@ -3,6 +3,11 @@ import { i18nMessagesState } from "../store/modules/i18nMessage";
 import { useAppSelector } from '@/store/index';
 import { I18n, I18nKey } from '@/@types/i18n.d';
 
+/**
+* Title: Custom hook thực hiện lấy về nội dung theo ngôn ngữ
+* Created by: manhnd1
+* Created date: //2022
+*/
 export const useI18n = (locales: I18n) => {
   // const i18nLocale = state.i18nLocaleState;
   const i18nLocale = useAppSelector(i18nLocaleState);
