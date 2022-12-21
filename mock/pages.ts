@@ -6,12 +6,12 @@ export default [
     url: '/api/pages/list/:id',
     method: 'get',
     response: ({ body }) => {
-      return  {
+      return {
         code: 0,
         data: mockjs.mock({
           id: '@integer(1)',
-          'name|1': ['个人博客', '网页小功能'],
-          'desc|1': ['李庆松的个人博客', '原创定制最好的网页插件小功能'],
+          'name|1': ['Blog cá nhân', 'Tiện ích trang web'],//['个人博客', '网页小功能'],
+          'desc|1': ['Blog cá nhân của Li Qingsong', 'Tùy chỉnh gốc các chức năng nhỏ tốt nhất của plug-in trang web'],//['李庆松的个人博客', '原创定制最好的网页插件小功能'],
           'href|1': ['http://liqingsong.cc', 'http://wyxgn.com'],
           'type|1': ['header', 'footer'],
         }),
@@ -30,8 +30,8 @@ export default [
           'list|10': [
             {
               id: '@integer(1)',
-              'name|1': ['个人博客', '网页小功能'],
-              'desc|1': ['李庆松的个人博客', '原创定制最好的网页插件小功能'],
+              'name|1': ['Blog cá nhân', 'Chức năng nhỏ của trang web'],//['个人博客', '网页小功能'],
+              'desc|1': ['Blog cá nhân của Li Qingsong', 'Tùy chỉnh gốc các chức năng nhỏ tốt nhất của plug-in trang web'],//['李庆松的个人博客', '原创定制最好的网页插件小功能'],
               'href|1': ['http://liqingsong.cc', 'http://wyxgn.com'],
               'type|1': ['header', 'footer'],
             },
@@ -44,60 +44,60 @@ export default [
     url: '/api/pages/list',
     method: 'post',
     response: ({ headers, body }) => {
-        return {
-          code: 0,
-          data: '',
-        };
+      return {
+        code: 0,
+        data: '',
+      };
     },
   },
   {
     url: '/api/pages/list/:id',
     method: 'put',
     response: ({ headers, body }) => {
-        return {
-          code: 0,
-          data: '',
-        };
+      return {
+        code: 0,
+        data: '',
+      };
     },
   },
   {
     url: '/api/pages/list/:id',
     method: 'delete',
     response: ({ headers, body }) => {
-        return {
-          code: 0,
-          data: '',
-        };
+      return {
+        code: 0,
+        data: '',
+      };
     },
   },
   {
     url: '/api/pages/form',
     method: 'post',
     response: ({ headers, body }) => {
-        return {
-          code: 0,
-          data: '',
-        };
+      return {
+        code: 0,
+        data: '',
+      };
     },
   },
   {
     url: '/api/pages/detail',
     method: 'get',
     response: ({ body }) => {
-      return{
+      return {
         code: 0,
         data: mockjs.mock({
           userInfo: {
             name: '小李',
             tel: '13770779817',
-            courier: '宇宙快递',
-            address: '宇宙地球',
-            remark: '无',
+            courier: 'Tốc hành vũ trụ',//'宇宙快递',
+            address: 'Trái đất không gian',//'宇宙地球',
+            remark: 'không ai',//'无',
           },
           refundApplication: {
             ladingNo: '1000000000',
             saleNo: '1234123421',
-            state: '已取货',
+            state: 'nhặt lên',//'已取货',
             childOrders: '3214321432',
           },
           'returnGoods|5': [
@@ -107,7 +107,7 @@ export default [
               barcode: '@integer(100000000000000,999999999999999)',
               price: '@float(1,15,0,2)',
               num: '@integer(1,5)',
-              amount: function() {
+              amount: function () {
                 return Number(this.price) * Number(this.num);
               },
             },
@@ -118,7 +118,7 @@ export default [
               time: '@datetime',
               rate: '@csentence(3, 5)',
               statuskey: '@boolean',
-              status: function() {
+              status: function () {
                 return this.statuskey ? 'success' : 'processing';
               },
               operator: '取货员 ID @integer(1000,9999)',

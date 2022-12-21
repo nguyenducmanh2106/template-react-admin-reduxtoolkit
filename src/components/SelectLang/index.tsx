@@ -20,13 +20,13 @@ export default memo(({ className }: SelectLangProps) => {
     () => [
       {
         key: 'zh-CN',
-        label: <> 简体中文</>,
+        label: <> Simplified Chinese</>,
         icon: <>🇨🇳 </>,
         disabled: i18nLocale === 'zh-CN',
       },
       {
         key: 'zh-TW',
-        label: <> 繁体中文</>,
+        label: <> traditional Chinese</>,
         icon: <>🇭🇰 </>,
         disabled: i18nLocale === 'zh-TW',
       },

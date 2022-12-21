@@ -39,7 +39,8 @@ export const CKEditorConfig = {
     'undo',
     'redo',
   ],
-  language: 'zh-cn',
+  // language: 'zh-cn',
+  language: 'vi-vn',
 };
 
 export interface CKEditorProps {

@@ -2,7 +2,7 @@ import { memo, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
-import { globalState } from '@/store/modules/global';
+import { globalState,setGlobal } from '@/store/modules/global';
 import IconSvg from '@/components/IconSvg';
 import BreadCrumbs from '@/components/BreadCrumbs';
 import SelectLang from '@/components/SelectLang';

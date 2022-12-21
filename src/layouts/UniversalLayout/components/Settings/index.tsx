@@ -44,7 +44,8 @@ export default memo(() => {
     <Popover
       content={
         <div className={style.setting}>
-          <div className={style['setting-title']}>页面风格</div>
+          {/* <div className={style['setting-title']}>页面风格</div> */}
+          <div className={style['setting-title']}>Page style</div>
 
           <div className={style['setting-radio']}>
             <div
@@ -77,7 +78,8 @@ export default memo(() => {
 
           <Divider style={{ margin: '10px 0' }} />
 
-          <div className={style['setting-title']}>导航模式</div>
+          {/* <div className={style['setting-title']}>导航模式</div> */}
+          <div className={style['setting-title']}>Navigation mode</div>
           <div className={style['setting-radio']}>
             <div
               className={classnames(style['setting-radio-item'], style['nav-inline'])}
@@ -111,7 +113,7 @@ export default memo(() => {
 
           <div className={style['setting-list']}>
             <div className={style['setting-list-item']}>
-              <span>固定头部</span>
+              <span>Header cố định</span>{/* <span>固定头部</span> */}
               <span className={style['setting-list-item-action']}>
                 <Switch
                   checkedChildren='开启'
@@ -133,7 +135,7 @@ export default memo(() => {
               </span>
             </div>
             <div className={style['setting-list-item']}>
-              <span>固定侧边</span>
+              <span>Side cố định</span>{/* <span>固定侧边</span> */}
               <span className={style['setting-list-item-action']}>
                 <Switch
                   checkedChildren='开启'

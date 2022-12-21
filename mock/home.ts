@@ -83,7 +83,8 @@ export default [
           currentPage: 1,
           'list|5': [
             {
-              name: '@ctitle(4,8)',
+              // name: '@ctitle(4,8)',
+              name: '@name()',
               hit: '@integer(1000,10000)',
             },
           ],
@@ -103,7 +104,8 @@ export default [
           currentPage: 1,
           'list|5': [
             {
-              name: '@ctitle(4,6)',
+              // name: '@ctitle(4,6)',
+              name: '@name()',
               id: '@integer(1)',
               pinyin: '@word(10,20)',
               hit: '@integer(1000,10000)',
@@ -130,7 +132,8 @@ export default [
                 alias: '@word(4)',
                 name: '@cword(4)',
               },
-              title: '@ctitle(20,30)',
+              // title: '@ctitle(20,30)',
+              title: '@name()',
               id: '@integer(1)',
               addtime: '@datetime',
               'tag|0-3': '@ctitle(4,6),',
@@ -153,7 +156,8 @@ export default [
           currentPage: 1,
           'list|5': [
             {
-              title: '@ctitle(20,30)',
+              // title: '@ctitle(20,30)',
+              title: '@name()',
               id: '@integer(1)',
               addtime: '@datetime',
               'tag|0-3': '@ctitle(4,6),',

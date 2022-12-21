@@ -9,7 +9,7 @@ import IconSvg from '@/components/IconSvg';
 
 export default memo(() => {
   // const userMessage = useRecoilValue(userMessageState);
-  const userMessage = [11, 2, 3];
+  const userMessage = 11;
   return (
     <Link to={'/'} className='universallayout-top-message'>
       <IconSvg name='message' />

@@ -23,6 +23,9 @@ const store = configureStore({
     // location: locationReducer,
     // resource: resourceReducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    serializableCheck: false,
+  }),
 });
 
 type RootState = ReturnType<typeof store.getState>;

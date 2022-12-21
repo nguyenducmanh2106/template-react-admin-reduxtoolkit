@@ -96,13 +96,20 @@ export default memo(({ jsonMenuData, routeItem }: RightTabNavProps) => {
   // 设置state global navList
   const setGlobalHeadTabNavList = useCallback(
     (val: (currVal: typeof global) => TabNavItem[]) => {
-      dispatch(setGlobal((preVal) => {
-        const navList = val(preVal);
-        return {
-          ...preVal,
-          headTabNavList: [...navList],
-        };
-      }));
+      // const nav = (preVal) => {
+      //   const navList = val(preVal);
+      //   return {
+      //     ...preVal,
+      //     headTabNavList: [...navList],
+      //   };
+      // }
+      const navList = val(global);
+      const nav = {
+        ...global,
+        headTabNavList: [...navList],
+      };
+      console.log(nav)
+      dispatch(setGlobal(nav));
     },
     [global, setGlobal],
   );
@@ -310,7 +317,7 @@ export default memo(({ jsonMenuData, routeItem }: RightTabNavProps) => {
                   label: (
                     <>
                       <IconSvg name='arrow-left2' />
-                      关闭左侧
+                      đóng bên trái{/* 关闭左侧 */}
                     </>
                   ),
                 },
@@ -319,7 +326,7 @@ export default memo(({ jsonMenuData, routeItem }: RightTabNavProps) => {
                   label: (
                     <>
                       <IconSvg name='arrow-right2' />
-                      关闭右侧
+                      đóng bên phải
                     </>
                   ),
                 },
@@ -328,7 +335,7 @@ export default memo(({ jsonMenuData, routeItem }: RightTabNavProps) => {
                   label: (
                     <>
                       <IconSvg name='close' />
-                      关闭其他
+                      đóng khác
                     </>
                   ),
                 },
@@ -337,7 +344,7 @@ export default memo(({ jsonMenuData, routeItem }: RightTabNavProps) => {
                   label: (
                     <>
                       <IconSvg name='close2' />
-                      关闭所有
+                      đóng tất cả
                     </>
                   ),
                 },

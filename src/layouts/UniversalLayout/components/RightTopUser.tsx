@@ -2,7 +2,7 @@ import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Dropdown, Menu } from 'antd';
 
-import { userState, initialState,setUser } from '@/store/modules/user';
+import { userState, initialState, setUser } from '@/store/modules/user';
 import { useI18n } from '@/hooks/useI18n';
 import locales from '../locales';
 
@@ -19,7 +19,8 @@ export default memo(() => {
   const dispatch = useAppDispatch()
   const navigate = useNavigate();
 
-  const onMenuClick = useCallback(
+
+  const onMenuClick: MenuProps['onClick'] = useCallback(
     ({ key }: { key: string }) => {
       if (key === 'logout') {
         dispatch(setUser({
